@@ -339,12 +339,12 @@ p, h1, h2, h3 {
     }
 
     footer p {
-        font-size: 1.25rem; /* Larger footer font size */
+        font-size: 36px; /* Larger footer font size */
     }
 
     #noteDiv {
         padding: 60px 80px 60px 80px; /* Increased padding for more space */
-        grid-template-columns: repeat(auto-fill,minmax(400px, 1fr)); /* Single column layout for small screens */
+        grid-template-columns: repeat(auto-fill,minmax(350px, 1fr)); /* Single column layout for small screens */
     }
 
     .note {
@@ -357,7 +357,7 @@ p, h1, h2, h3 {
 
     .note p {
         margin-top : 1.1rem;
-        font-size: 1.5rem; /* Larger note text font size */
+        font-size: 36px; /* Larger note text font size */
     }
 
     .icon-button {
@@ -410,7 +410,7 @@ p, h1, h2, h3 {
     }
 
     .note-details p {
-        font-size: 1.5rem; /* Larger text font size */
+        font-size: 36px; /* Larger text font size */
     }
 
     .note-details button {
