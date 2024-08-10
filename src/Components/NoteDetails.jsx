@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function NoteDetails(props){
   return(
     <div className="note-details">

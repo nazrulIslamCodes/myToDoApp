@@ -34,7 +34,7 @@ header {
     justify-content: space-between;
     position: relative;
     z-index: 10;
-    flex-wrap: wrap; /* Allow wrapping in smaller screens */
+    
 }
 
 header h1 {
@@ -82,7 +82,7 @@ footer p {
     padding: 30px 50px;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin-bottom: 40px; /* Adjusted margin for better spacing */
 }
 
@@ -146,7 +146,7 @@ footer p {
     transition: box-shadow 0.3s, transform 0.3s;
     position: absolute;
     right: 10px; /* Adjusted for small screens */
-    top: 16px;
+    top: 6rem;
     z-index: 1;
 }
 
@@ -219,13 +219,13 @@ footer p {
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 200;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     display: inline-block; /* Ensure button is inline */
-    margin-top: 12px; /* Space from other elements */
+    
 }
 
 .addNoteBtn:hover {
@@ -311,17 +311,46 @@ p, h1, h2, h3 {
     transform: translateY(0);
 }
 
-/* Default grid layout (for larger screens) */
-#noteDiv {
-    padding: 30px 50px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    margin-bottom: 40px; /* Adjusted margin for better spacing */
+@media screen and (max-width: 400px) {
+
+    header{
+        padding:1.5rem;
+    }
+    header h1{
+        font-size: 1.5rem;
+    }
+    /* Note Container */
+    #noteDiv {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        margin-bottom: 20px;
+    }
+
+    .addNote{
+        top:6.7rem;
+        width:230px;
+    }
+    .addNote textarea{
+        min-height: 150px;
+    }
 }
 
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    header{
+        padding:2rem;
+    }
+    /* Note Container */
+    #noteDiv {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        margin-bottom: 20px;
+    }
 
-
+    .addNote{
+        top:7.6rem;
+        width:280px;
+    }
+}
 
 
 
