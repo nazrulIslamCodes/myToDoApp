@@ -1,0 +1,308 @@
+/* General Reset and Box-Sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: #fafafa;
+    color: #333;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    overflow-x: hidden;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* Header */
+header {
+    background-color: #6200ea;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+header input {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #dcdcdc;
+    padding: 0 12px;
+    transition: border-color 0.3s;
+}
+
+header input:focus {
+    border-color: #03dac6;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #616161;
+    padding: 0.5rem;
+    text-align: center;
+    border-top: 1px solid #dcdcdc;
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+/* Note Container */
+#noteDiv {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* Note */
+.note {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.note h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.note p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.note:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+/* Icon Button */
+.icon-button {
+    width: 28px;
+    height: 28px;
+    background-image: url('../../public/assets/images/trash.png');
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.icon-button:hover {
+    opacity: 0.7;
+}
+
+/* Add Note Div */
+.addNote {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    background-color: #ffffff;
+    border-radius: 12px;
+    width: 320px;
+    padding: 24px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: absolute;
+    right: 170px;
+    top: 16px;
+    z-index: 1;
+}
+
+.addNote:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+/* Textarea & Input in Add Note */
+.addNote textarea,
+.addNote input {
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif; /* Ensure same font */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s;
+}
+
+.addNote textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.addNote textarea::placeholder,
+.addNote input::placeholder {
+    color: #888; /* Placeholder color */
+    font-size: 1rem; /* Placeholder font size */
+    font-family: 'Roboto', sans-serif; /* Placeholder font family */
+}
+
+.addNote textarea:focus,
+.addNote input:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+/* Button */
+.addNote button {
+    border: none;
+    background-color: #6200ea;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.addNote button:hover {
+    background-color: #3700b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.addNote button:active {
+    background-color: #6200ea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+/* Add Note Button */
+.addNoteBtn {
+    border: none;
+    background-color: #4a90e2;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.addNoteBtn:hover {
+    background-color: #357abd;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.addNoteBtn:active {
+    background-color: #4a90e2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+/* Submit and Cancel */
+.sbmtCncl {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* Text Wrapping */
+p, h1, h2, h3 {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Note Details Div */
+.note-details {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Increased gap to maintain spacing between button and content */
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Note Details Heading */
+.note-details h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0 0 8px; /* Reduced margin-bottom to decrease space before the paragraph */
+    color: #333;
+}
+
+/* Note Details Content */
+.note-details p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0; /* Remove margin to prevent extra spacing */
+}
+
+/* Back Button */
+.note-details button {
+    border: none;
+    background-color: #6200ea;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    width: fit-content;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    margin-bottom: 10px;
+}
+
+.note-details button:hover {
+    background-color: #3700b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.note-details button:active {
+    background-color: #6200ea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
