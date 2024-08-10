@@ -326,7 +326,7 @@ p, h1, h2, h3 {
     #noteDiv {
         padding: 20px;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     .addNote{
@@ -351,7 +351,7 @@ p, h1, h2, h3 {
     #noteDiv {
         padding: 20px;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     .addNote{
