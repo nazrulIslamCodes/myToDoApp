@@ -321,7 +321,7 @@ p, h1, h2, h3 {
 }
 
 /* Mobile (up to 479px) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     /* Styles for mobile devices */
     #noteDiv {
         padding: 20px;
