@@ -320,22 +320,8 @@ p, h1, h2, h3 {
     margin-bottom: 40px; /* Adjusted margin for better spacing */
 }
 
-/* Mobile (up to 1000px) */
-@media only screen and (max-width: 950px) {
-    
-    #noteDiv {
-        padding: 60px 80px 60px 80px; /* Increased padding for more space */
-        grid-template-columns: repeat(1, 1fr); /* Single column layout for small screens */
-    }
 
-    .note {
-        padding: 30px; /* Larger note padding for more content space */
-    }
-    p, h1, h2, h3 {
-        white-space: pre-wrap;
-        word-wrap: break-word;
-    }
-}
+
 
 
 
