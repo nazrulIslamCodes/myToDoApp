@@ -344,7 +344,7 @@ p, h1, h2, h3 {
 
     #noteDiv {
         padding: 60px 80px 60px 80px; /* Increased padding for more space */
-        grid-template-columns: repeat(2,1fr); /* Single column layout for small screens */
+        grid-template-columns: repeat(auto-fill,minmax(400px, 1fr)); /* Single column layout for small screens */
     }
 
     .note {
@@ -416,6 +416,10 @@ p, h1, h2, h3 {
     .note-details button {
         padding: 16px 30px; /* Larger button padding */
         font-size: 1.5rem; /* Larger button font size */
+    }
+    p, h1, h2, h3 {
+        white-space: pre-wrap;
+        word-wrap: break-word;
     }
 }
 
