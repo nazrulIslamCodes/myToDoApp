@@ -312,8 +312,8 @@ p, h1, h2, h3 {
 }
 
 @media screen and (max-width: 400px) {
-    p{
-        font-size: 15.5px !important;
+    .note p{
+        font-size: 15.7px !important;
     }
 
     header{
@@ -340,8 +340,8 @@ p, h1, h2, h3 {
 
 @media screen and (min-width: 400px) and (max-width: 600px) {
 
-    p{
-        font-size: 15.5px !important;
+    .note p{
+        font-size: 15.7px !important;
     }
 
     header{
